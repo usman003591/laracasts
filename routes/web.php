@@ -44,19 +44,20 @@ Route::get('/jobs/{id}/edit', function ($id) {
 });
 
 //Updates the job
-Route::post('/jobs', function ($id) {
+Route::patch('/jobs/{id}', function ($id) {
     $job = Job::find($id);
     request()->validate([
         'title' => ['required', 'min:3'],
         'salary' => ['required'],
     ]);
+
     $job->update([
         'title' => request('title'),
         'salary' => request('salary'),
     ]);
 
     return redirect('/jobs');
-})->name('create-job');
+})->name('update-job');
 
 //show individual job
 Route::get('/jobs/{id}', function ($id) {

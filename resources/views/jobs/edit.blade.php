@@ -3,7 +3,7 @@
         Edit Job: {{ $job->title }}
     </x-slot:heading>
 
-    <form method="POST" action="{{ route('create-job') }}">
+    <form method="PATCH" action="{{ route('update-job') }}">
         @csrf
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
@@ -21,9 +21,9 @@
                         </div>
                     </div>
                 </div>
-                @error('title')
+                {{-- @error('title')
                 <small class="text-red-600">{{ $message }}</small>
-                @enderror
+                @enderror --}}
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <div class="sm:col-span-4">
@@ -38,9 +38,9 @@
                         </div>
                     </div>
                 </div>
-                @error('salary')
+                {{-- @error('salary')
                 <small class="text-red-600">{{ $message }}</small>
-                @enderror
+                @enderror --}}
             </div>
         </div>
 
