@@ -8,7 +8,7 @@
         This job pays {{ $job->salary }} monthly
     </p>
 
-    <form method="POST" action="/jobs/{{ $job->id }}" id="delete-form">
+    <form method="POST" action="/jobs/{{ $job->id }}" id="delete-form" class="hidden">
         @csrf
         @method('DELETE')
     </form>
