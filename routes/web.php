@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\JobsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobsController;
+use App\Http\Controllers\UserController;
 
 //Show the home page
 // Route::get('/', function () {
@@ -21,6 +22,9 @@ Route::controller(JobsController::class)->group(function () {
 });
 
 // Route::resource('jobs', JobsController::class);
+
+//Auth
+Route::get('/register', [UserController::class, 'create']);
 
 //Show contact page
 // Route::get('/contact', function () {
