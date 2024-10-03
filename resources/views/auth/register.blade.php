@@ -8,13 +8,24 @@
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
 
-                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
+                    <x-form-field>
+                        <div class="relative sm:max-w-md">
+                            <input name="name" id="name" required
+                                class="block flex-1 px-3 py-1.5 pb-2.5 pt-3 w-full text-sm ring-1 text-gray-900 bg-transparent rounded-lg border-0 ring-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-600 peer"
+                                placeholder=" " />
+                            <label for="name"
+                                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-gray-100 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-5 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Full
+                                Name</label>
+                        </div>
+
+                    </x-form-field>
                     <x-form-field>
                         <x-form-label for="name">Name</x-form-label>
-                        <div class="mt-2">
+                        <div class="">
                             <div
                                 class="flex rounded-md shadow-sm ring-1 ring-gray-300 focus-within:rounded-md focus-within:ring-gray-900 sm:max-w-md">
-                                <x-form-input name="name" id="name" required />
+                                <x-form-input />
                             </div>
                             <x-form-error name='name'></x-form-error>
                         </div>
