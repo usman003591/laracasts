@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:heading>
-        Register User
+        Log In
     </x-slot:heading>
 
-    <form method="POST" action="">
+    <form method="POST" action="/login">
         @csrf
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
@@ -26,7 +26,7 @@
                         <div class="mt-2">
                             <div
                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 sm:max-w-md focus-within:rounded-md focus-within:ring-gray-900">
-                                <x-form-input name="password" id="password" required />
+                                <x-form-input type="password" name="password" id="password" required />
                             </div>
                             <x-form-error name='password'></x-form-error>
                         </div>
@@ -37,7 +37,7 @@
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
-            <x-form-button>Create</x-form-button>
+            <x-form-button>Log In</x-form-button>
         </div>
     </form>
 
