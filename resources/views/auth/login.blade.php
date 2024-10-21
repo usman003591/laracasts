@@ -15,7 +15,7 @@
                         <div class="mt-2">
                             <div
                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 sm:max-w-md focus-within:rounded-md focus-within:ring-gray-900">
-                                <x-form-input name="email" id="email" required />
+                                <x-form-input name="email" id="email" value="{{ old('email') }}" required />
                             </div>
                             <x-form-error name='email'></x-form-error>
                         </div>
