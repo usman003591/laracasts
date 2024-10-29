@@ -6,8 +6,10 @@ namespace App\Http\Controllers;
 use Gate;
 use App\Models\Job;
 use App\Models\User;
+use App\Mail\JobPosted;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class JobsController extends Controller
 {
@@ -32,11 +34,16 @@ class JobsController extends Controller
             'title' => ['required', 'min:3'],
             'salary' => ['required'],
         ]);
-        Job::create([
+
+        $job = Job::create([
             'title' => request('title'),
             'salary' => request('salary'),
             'employer_id' => 1,
         ]);
+
+        Mail::to($job->employer->user)->send(       //Laravel is smart enough that it will automatically get the email of the user
+            new JobPosted($job)
+        );
 
         return redirect('/jobs');
     }
@@ -98,7 +105,7 @@ class JobsController extends Controller
     }
     public function destroy(Job $job)
     {
-        Gate::authorize('edit-job', $job);
+        Gate::authorize('edit', $job);
 
         $job->delete();
         return redirect('/jobs');
