@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\RegisterUserController;
-use App\Http\Controllers\SessionController;
+use Barryvdh\DomPDF\Facade\PDF;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobsController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RegisterUserController;
 
 //Show the home page
 // Route::get('/', function () {
@@ -38,3 +39,15 @@ Route::post('/logout', [SessionController::class, 'destroy']);
 //     return view('contact');
 // });
 Route::view('/contact', 'contact');     //Show contact page
+
+//to view or download pdfs
+
+// Route::get('/pdf', function () {
+//     // Load the view as PDF
+//     $pdf = PDF::loadView('pdf.document');
+
+//     // Stream PDF in the browser
+//     return $pdf->stream('sample-document.pdf');
+
+//     // return view('pdf.document');
+// });

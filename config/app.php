@@ -41,6 +41,16 @@ return [
 
     'debug' => (bool) env('APP_DEBUG', false),
 
+    // 'providers' => [
+    //     Barryvdh\DomPDF\ServiceProvider::class,
+    // ],
+    'aliases' => [
+        'PDF' => Barryvdh\DomPDF\Facade\Pdf::class,
+    ],
+
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Application URL
