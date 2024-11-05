@@ -1,3 +1,4 @@
 import './bootstrap';
+import '../css/app.css'
 
-// alert("Hello from the laracasts!!!")
+// alert("Hello from the laracasts")
