@@ -141,16 +141,87 @@
             line-height: 20px;
         }
 
+        .gpe-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 1px solid dimgray;
+        }
+
+        .gpe-table td {
+            text-align: left;
+            vertical-align: middle;
+            padding: 7px 5px;
+            border-bottom: 1px solid dimgray;
+        }
+
+        .gpe-table th {
+            width: 50%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 7px 5px;
+            border-bottom: 1px solid dimgray;
+        }
+
+
+        .investigations-table {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0;
+            border: 1px solid dimgray;
+            /* border-left: 1px solid dimgray;
+            border-right: 1px solid dimgray; */
+            border-collapse: collapse;
+        }
+
+        .investigations-table td {
+            width: 30%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .investigation-types {
+            width: 100%;
+            border-top: 1px solid dimgray;
+            border-right: 1px solid dimgray;
+            /* border-bottom: 1px solid dimgray; */
+            border-collapse: collapse;
+        }
+
+
+        .investigation-types td {
+            padding: 7px 5px;
+        }
+
+        .investigation-types th {
+            padding: 7px 5px;
+        }
+
+        .investigation-types-3 {
+            width: 100%;
+            border-top: 1px solid dimgray;
+            /* border-bottom: 1px solid dimgray; */
+            border-collapse: collapse;
+        }
+
+        .investigation-types-3 td {
+            padding: 7px 5px;
+        }
+
+        .investigation-types-3 th {
+            padding: 7px 5px;
+        }
+
+        .row-bottom {
+            border-bottom: 1px solid dimgray;
+        }
+
         .default-table {
             width: 100%;
             border-collapse: collapse;
             /* table-layout: fixed; */
             margin-bottom: 20px;
             border: 1px solid dimgray;
-        }
-
-        .investigations td {
-            width: 50%;
         }
 
         .default-table th {
@@ -273,28 +344,77 @@
                         </tr>
                     </tbody>
                 </table>
-                <table class="default-table investigations">
+
+                <table class="gpe-table">
                     <thead>
                         <tr>
-                            <th colspan="2">Investigations</th>
+                            <th colspan="2">General Physical Examinations</th>
+                        </tr>
+                        <tr>
+                            <th>Symptoms</th>
+                            <th class="column-left">Additional Symptoms</th>
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>ECG</td>
-                            <td class="column-left">Thyroid Screening (Free T4, TSH) Entitled</td>
-                        </tr>
-
-                        <tr>
-                            <td>Glycosylated Haemaoglobin</td>
-                            <td class="column-left">Renal Function Test</td>
-                        </tr>
-                        <tr>
-                            <td>Liver Function Test</td>
-                            <td class="column-left">Lipid Profile</td>
+                            <td>Test</td>
+                            <td class="column-left">Test</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <table class="investigations-table" style="width: 100%">
+                    <thead>
+                        <th colspan="3" style="padding: 7px 5px;">
+                            Investigations
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 30%">
+                                <table class="investigation-types">
+                                    <thead>
+                                        <th class="row-bottom">Radiology</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ECG</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td style="width: 30%">
+                                <table class="investigation-types">
+                                    <thead>
+                                        <th class="row-bottom">Pathology</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ECG</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                            <td style="width: 30%">
+                                <table class="investigation-types-3">
+                                    <thead>
+                                        <th class="row-bottom">Rahabilitation</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ECG</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
                 <table class="default-table">
                     <thead>
                         <tr>

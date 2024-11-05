@@ -1,3 +1,3 @@
 import './bootstrap';
 
-alert("Hello from the laracasts!!!")
+// alert("Hello from the laracasts!!!")
