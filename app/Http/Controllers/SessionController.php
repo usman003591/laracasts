@@ -25,7 +25,6 @@ class SessionController extends Controller
                 'email' => 'Invalid credentials! Please try again.'
             ]);
         }
-        ;
         //regenerate the session token
         request()->session()->regenerate();
         //redirect
