@@ -15,7 +15,7 @@ Route::view('/', 'home', ['greeting' => 'Hi!', 'name' => 'John Wick']);
 
 Route::controller(JobsController::class)->group(function () {
     Route::get('/jobs', 'index');
-    Route::get('/jobs/create', 'create');
+    Route::get('/jobs/create', 'create')->middleware('auth');
     Route::post('/jobs', 'store')->middleware('auth')->name('create-job');
     Route::get('/jobs/{job}/edit', 'edit')->middleware('auth')->can('edit', 'job');
     Route::patch('/jobs/{job}', 'update')->middleware('auth')->can('edit', 'job');

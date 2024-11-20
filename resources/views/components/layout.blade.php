@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>laracasts</title>
-    @vite(['resources/js/app.js'])
+    {{-- @vite(['resources/js/app.js']) --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     </link>
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="h-full">
@@ -87,8 +87,8 @@
                                 alt="">
                         </div>
                         <div class="ml-3">
-                            <div class="text-base font-medium leading-none text-white">John Wick</div>
-                            <div class="text-sm font-medium leading-none text-gray-400">wick@example.com</div>
+                            <div class="text-base font-medium leading-none text-white">Malik Usman</div>
+                            <div class="text-sm font-medium leading-none text-gray-400">usman@example.com</div>
                         </div>
                         <button type="button"
                             class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
