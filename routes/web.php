@@ -40,14 +40,15 @@ Route::post('/logout', [SessionController::class, 'destroy']);
 // });
 Route::view('/contact', 'contact');     //Show contact page
 
-// //to view or download pdfs
+//to view or download pdfs
 
-// Route::get('/pdf', function () {
-//     // Load the view as PDF
-//     $pdf = PDF::loadView('pdf.document');
+Route::get('/pdf', function () {
+    // Load the view as PDF
+    $pdf = PDF::loadView('pdf.patients-state');
+    // $pdf = PDF::loadView('pdf.document');
 
-//     // Stream PDF in the browser
-//     return $pdf->stream('sample-document.pdf');
+    // Stream PDF in the browser
+    return $pdf->stream('sample-document.pdf');
 
-//     // return view('pdf.document');
-// });
+    // return view('pdf.document');
+});
