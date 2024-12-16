@@ -80,6 +80,12 @@
         .label {
             height: 2.5rem;
         }
+
+        @media print {
+            .reciept {
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 

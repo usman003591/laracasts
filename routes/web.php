@@ -44,7 +44,8 @@ Route::view('/contact', 'contact');     //Show contact page
 
 Route::get('/pdf', function () {
     // Load the view as PDF
-    $pdf = PDF::loadView('pdf.patients-state');
+    $pdf = PDF::loadView('pdf.daily-cash-details')->setPaper('a4', 'landcsape');
+    // $pdf = PDF::loadView('pdf.patients-state');
     // $pdf = PDF::loadView('pdf.document');
 
     // Stream PDF in the browser
