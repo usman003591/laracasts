@@ -16,6 +16,10 @@ body {
     margin: 10mm 10mm;
 }
 
+.reciept {
+    page-break-inside: avoid;
+}
+
 .header {
     margin-top: 40px;
     text-align: center;
