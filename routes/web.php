@@ -11,7 +11,7 @@ use App\Http\Controllers\RegisterUserController;
 //     return view('home', ['greeting' => 'Hi!', 'name' => 'John Wick']);     //Now we can use a $greeting variable in the views to access it's value from the route
 // });
 
-Route::view('/', 'home', ['greeting' => 'Hi!', 'name' => 'John Wick']);
+Route::view('/', 'home', ['greeting' => 'Good Afternoon', 'name' => 'Mr. Wick!']);
 
 Route::controller(JobsController::class)->group(function () {
     Route::get('/jobs', 'index');

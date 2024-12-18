@@ -97,11 +97,11 @@
             margin: 40px auto auto auto;
             height: auto;
             font-size: x-small;
+            text-align: center;
         }
 
         .footer-item {
             width: 15%;
-            text-align: center;
             border-top: 1px solid black;
             padding-top: 3px;
         }
@@ -392,6 +392,13 @@
         </section>
         <footer>
             <table class="footer">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
                 <tr>
                     <th class="footer-item">Manager Finance</th>
                     <th></th>
