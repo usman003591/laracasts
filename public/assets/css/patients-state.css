@@ -12,82 +12,57 @@ body {
 }
 
 @page {
-    size: A4 landscape; /* Set paper size to A4 landscape */
-    margin: 10mm 10mm;
+    size: A4 landscape;
+    margin-top: 10mm 10mm;
 }
 
-.dc-container {
+.pr-container {
     width: 100%;
     max-width: 297mm;
     background-color: #fff;
     height: auto;
-    margin: auto;
+    margin: 60px auto auto auto;
     box-sizing: border-box;
 }
-.header {
-    margin: 20px auto auto auto;
-    height: auto;
-    text-align: center;
-    font-size: smaller;
-    margin-bottom: 10px;
-}
-
-.hms-logo {
-    height: 50px;
-    width: 50px;
-}
-.date {
-    font-size: smaller;
+header {
     margin: auto;
     height: auto;
-    width: 93%;
-    text-align: right;
-    padding-bottom: 2px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
 }
 
-.dc-table {
+.pr-table {
+    width: 93%;
+    max-width: 95%;
     border: 1px solid dimgray;
-    font-size: xx-small;
+    font-size: x-small;
     margin: auto;
     height: auto;
     border-collapse: collapse;
 }
+thead {
+    display: table-header-group;
+    margin-bottom: 5mm;
+}
 
-.dc-table tr {
+tbody {
+    display: table-row-group;
+}
+
+.pr-table tr {
     border-bottom: 1px solid dimgray;
     text-align: center;
+    page-break-inside: avoid;
 }
-.dc-table th {
+
+.pr-table th {
     padding: 5px 5px;
-    height: 20px;
 }
-.dc-table td {
-    padding: 5px 5px;
+.pr-table td {
+    padding: 7px 5px;
 }
 
 .column-left {
     border-left: 1px solid dimgray;
-}
-
-.note {
-    font-size: smaller;
-    margin: auto;
-    height: auto;
-    width: 94%;
-    text-align: left;
-    padding-top: 2px;
-}
-
-.footer {
-    width: 93%;
-    margin: 40px auto auto auto;
-    height: auto;
-    font-size: x-small;
-}
-
-.footer-item {
-    width: 15%;
-    text-align: center;
-    border-top: 1px solid black;
-    padding-top: 3px;
 }

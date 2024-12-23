@@ -1,11 +1,10 @@
 <?php
 
-use Barryvdh\DomPDF\Facade\PDF;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterUserController;
-
+use Barryvdh\DomPDF\Facade\PDF;
 //Show the home page
 // Route::get('/', function () {
 //     return view('home', ['greeting' => 'Hi!', 'name' => 'John Wick']);     //Now we can use a $greeting variable in the views to access it's value from the route
@@ -44,9 +43,10 @@ Route::view('/contact', 'contact');     //Show contact page
 
 Route::get('/pdf', function () {
     // Load the view as PDF
-    $pdf = PDF::loadView('pdf.daily-cash-details')->setPaper('a4', 'landcsape');
+    // $pdf = PDF::loadView('pdf.daily-cash-details')->setPaper('a4', 'landcsape');
     // $pdf = PDF::loadView('pdf.patients-state');
-    // $pdf = PDF::loadView('pdf.document');
+    $pdf = PDF::loadView('pdf.patients-record');
+    // $pdf = PDF::loadView('pdf.document')->setPaper('a4', 'portrait');
 
     // Stream PDF in the browser
     return $pdf->stream('sample-document.pdf');
