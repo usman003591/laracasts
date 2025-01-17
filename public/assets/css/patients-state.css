@@ -6,63 +6,52 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
 
 @page {
-    size: A4 landscape;
+    size: A7;
     margin-top: 10mm 10mm;
 }
 
-.pr-container {
-    width: 100%;
-    max-width: 297mm;
-    background-color: #fff;
-    height: auto;
-    margin: 60px auto auto auto;
-    box-sizing: border-box;
-}
-header {
-    margin: auto;
-    height: auto;
+.receipt {
+    width: 58mm;
+    padding: 10px;
+    border: 1px solid rgb(145, 143, 143);
+    margin: 30px auto;
     text-align: center;
-    text-decoration: underline;
-    margin-bottom: 15px;
 }
 
-.pr-table {
-    width: 93%;
-    max-width: 95%;
-    border: 1px solid dimgray;
-    font-size: x-small;
-    margin: auto;
-    height: auto;
-    border-collapse: collapse;
-}
-thead {
-    display: table-header-group;
-    margin-bottom: 5mm;
+.receipt_no{
+    text-align: left;
+    font-size: 11px;
 }
 
-tbody {
-    display: table-row-group;
+.qr-code {
+    margin-bottom: 10px;
 }
 
-.pr-table tr {
-    border-bottom: 1px solid dimgray;
-    text-align: center;
-    page-break-inside: avoid;
+.receipt-header {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.pr-table th {
-    padding: 5px 5px;
+.details {
+    font-size: 11px;
+    margin-bottom: 10px;
+    text-align: left;
 }
-.pr-table td {
-    padding: 7px 5px;
+.details th, td {
+    text-align: left;
+    padding: 3px;
 }
 
-.column-left {
-    border-left: 1px solid dimgray;
+.footer {
+    font-size: 10px;
+    border-top: 1px dotted #000;
+    padding-top: 5px;
+    margin-top: 10px;
 }
