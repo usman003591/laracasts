@@ -44,10 +44,11 @@ Route::view('/contact', 'contact');     //Show contact page
 Route::get('/pdf', function () {
     // Load the view as PDF
     // $pdf = PDF::loadView('pdf.document')->setPaper('a4', 'portrait');
+    $pdf = PDF::loadView('pdf.pathology_report')->setPaper('a4', 'portrait');
     // $pdf = PDF::loadView('pdf.patients-state');
     // $pdf = PDF::loadView('pdf.daily-cash-details')->setPaper('a4', 'landcsape');
     // $pdf = PDF::loadView('pdf.patients-record')->setPaper('a4', 'landscape');
-    $pdf = PDF::loadView('pdf.OPD-receipt');
+    // $pdf = PDF::loadView('pdf.OPD-receipt');
 
     // Stream PDF in the browser
     return $pdf->stream('sample-document.pdf');
